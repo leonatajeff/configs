@@ -1,10 +1,12 @@
+vim.g.mapleader = " "
+vim.api.nvim_set_keymap('n', '<leader>pv', ':Vex<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader><CR>', ':so ~/.config/nvim/init.lua<CR>', { noremap = true })
 vim.opt.relativenumber = true
 vim.opt.scrolloff = 8
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.smartindent = true
-
-
+vim.cmd("colorscheme desert")
 local ensure_packer = function()
   local fn = vim.fn
   local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
@@ -30,3 +32,4 @@ return require('packer').startup(function(use)
     require('packer').sync()
   end
 end)
+
