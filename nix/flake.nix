@@ -83,8 +83,8 @@
   in
   {
     # Build darwin flake using:
-    # $ darwin-rebuild build --flake .#WF11090
-    darwinConfigurations."WF11090" = nix-darwin.lib.darwinSystem {
+    # $ darwin-rebuild build --flake .#SOMEUSER
+    darwinConfigurations."SOMEUSER" = nix-darwin.lib.darwinSystem {
       system = system;
       modules = [ configuration
       home-manager.darwinModules.home-manager
